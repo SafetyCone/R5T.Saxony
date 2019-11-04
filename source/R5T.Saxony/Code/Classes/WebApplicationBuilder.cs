@@ -1,12 +1,12 @@
 ﻿using System;
 
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
+using Microsoft.AspNetCore.Hosting;
+
 using R5T.Gaul;
 using R5T.Herulia.Extensions;
-using R5T.Sardinia;
 
 using AspNetCoreStartup = Microsoft.AspNetCore.Hosting.IStartup;
 
@@ -15,7 +15,7 @@ namespace R5T.Saxony
 {
     public static class WebApplicationBuilder
     {
-        public static IWebHost UseStartup<TStartup>()
+        public static IWebHostBuilder UseStartup<TStartup>()
             where TStartup : class, IWebApplicationStartup
         {
             // Build the standard startup.
@@ -30,9 +30,7 @@ namespace R5T.Saxony
 
             // Configure services, Configure service instances, and Configure(IApplicationBuilder).
             var webHostBuilder = WebApplicationBuilder.GetDefaultWebHostBuilder(webApplicationConfiguration, webApplicationStartup);
-
-            var webHost = webHostBuilder.Build();
-            return webHost;
+            return webHostBuilder;
         }
 
         /// <summary>

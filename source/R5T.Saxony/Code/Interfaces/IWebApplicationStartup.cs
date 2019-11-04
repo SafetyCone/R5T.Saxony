@@ -9,6 +9,6 @@ namespace R5T.Saxony
 {
     public interface IWebApplicationStartup : IApplicationStartup
     {
-        void Configure(IApplicationBuilder app);
+        void Configure(IApplicationBuilder applicationBuilder);
     }
 }

@@ -1,7 +1,8 @@
 ﻿using System;
 
-using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
+
+using Microsoft.AspNetCore.Builder;
 
 using IAspNetCoreStartup = Microsoft.AspNetCore.Hosting.IStartup;
 
